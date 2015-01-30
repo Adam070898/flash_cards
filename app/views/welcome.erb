@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Welcome <%= User.where(id: session[:user]).first.name%></h1>
+  <h2>Start a new game</h2>
+  <div class="login_container"><form action="/instructions" method="post">
+    <p>Choose a deck to play with</p>
+    <select name="deck">
+      <% Deck.all.each do |deck|%>
+        <option value="<%=deck.id%>"><%=deck.name%> (<%=deck.cardcount%> Cards)</option>
+      <% end %>
+    </select>
+    <input type="submit" value="start">
+  </form></div>
+
+  <br></br>
+  <hr>
+  <form action="/logout" method="post">
+    <input type="submit" value="Log Out">
+  </form>
+</div>

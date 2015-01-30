@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>Question <%= params[:question_id].to_s%> - <%=session[:lives]%> attempts left</h1>
+  <div class="login_container">
+  <p>Question: <%=@question%></p>
+  <p>Answer: <input type="text" value="<%=@product%>" size="25"></p>
+  <p><input type="submit"></p>
+  </div>
+</div>

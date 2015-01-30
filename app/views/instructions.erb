@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Hello and welcome to HTML flash cards!</h2>
+  <h3>(Now with 50% more HTML!)</h3>
+  <p>To play, type in what you think is the correct answer for the question, then press enter or click the button to submit your answer. You have can have up to 3 failed attempts per game, after that, it's game over!
+  </p>
+  <p>Example:</p>
+  <div class="login_container">
+  <p>Question: What is the my favorite product?</p>
+  <p>Answer: <input type="text" value="<%=@product%>" size="25"></p>
+  <p><input type="submit"></p>
+  </div>
+  <h2>Ready? Click the massive button below to continue</h2>
+  <div class="wat">
+    <form action="/play/<%=@deck.cards.first.id%>" method="post">
+      <input type="submit" value="Start!">
+    </form>
+  </div>
+</div>
